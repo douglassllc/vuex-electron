@@ -1,6 +1,6 @@
 {
   "name": "@douglassllc/vuex-electron",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Vuex Electron",
   "keywords": [
     "vue",
@@ -36,6 +36,12 @@
       "path": "./dist/**/*.js",
       "maxSize": "2 kB"
     }
+  ],
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "README.md",
+    "dist"
   ],
   "devDependencies": {
     "@babel/cli": "^7.24.1",

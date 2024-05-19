@@ -99,10 +99,14 @@ class PersistedState {
 }
 
 export default (options = {}) => (store) => {
-  const persistedState = new PersistedState(options, store)
+  try {
+    const persistedState = new PersistedState(options, store)
 
-  persistedState.loadOptions()
-  persistedState.checkStorage()
-  persistedState.loadInitialState()
-  persistedState.subscribeOnChanges()
+    persistedState.loadOptions()
+    persistedState.checkStorage()
+    persistedState.loadInitialState()
+    persistedState.subscribeOnChanges()
+  } catch (error) {
+    console.log(error)
+  }
 }
