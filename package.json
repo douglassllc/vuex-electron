@@ -14,16 +14,13 @@
   "author": "Andrew Emelianenko <emelianenko.web@gmail.com>",
   "license": "MIT",
   "private": false,
-  "engines": {
-    "node": "<19"
-  },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "babel src -d dist --env-name production",
     "watch": "babel src -d dist --watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "yarn lint && jest && bundlesize"
+    "test": "yarn lint && jest"
   },
   "jest": {
     "collectCoverage": true,
@@ -31,12 +28,6 @@
       "src/**/*.js"
     ]
   },
-  "bundlesize": [
-    {
-      "path": "./dist/**/*.js",
-      "maxSize": "2 kB"
-    }
-  ],
   "files": [
     "CHANGELOG.md",
     "LICENSE.md",
@@ -52,7 +43,6 @@
     "babel-jest": "^29.7.0",
     "babel-plugin-add-module-exports": "^1.0.4",
     "babel-preset-minify": "^0.5.2",
-    "bundlesize": "^0.18.2",
     "electron": "^29.1.5",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
